@@ -1,0 +1,9 @@
+# ignore emacs backup files
+.*~$
+
+# ignore transient emacs files, add
+^#.*#$
+/#.*#$
+^\.#
+/\.#
+^koba@.*

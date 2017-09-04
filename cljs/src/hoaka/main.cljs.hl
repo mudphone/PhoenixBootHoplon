@@ -1,0 +1,11 @@
+(ns hoaka.main
+  (:require
+   [cljsjs.bootstrap]
+   [cljsjs.jquery]))
+
+(defelem hello [_ _]
+  (h1 "Hello, Hoplon!"))
+
+(js/jQuery #(-> (js/jQuery "#mountpoint")
+                .empty
+                (.append (hello))))

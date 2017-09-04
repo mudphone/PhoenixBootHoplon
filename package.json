@@ -1,0 +1,30 @@
+{
+  "name": "hoaka",
+  "version": "1.0.0",
+  "description": "## Install Steps",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PasDeChocolat/PSD_Forms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PasDeChocolat/PSD_Forms/issues"
+  },
+  "homepage": "https://github.com/PasDeChocolat/PSD_Forms#readme",
+  "engines": {
+    "node": "6.x"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "postcss": "^6.0.4",
+    "postcss-cli": "^4.1.0"
+  }
+}

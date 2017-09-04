@@ -14,6 +14,8 @@
   * update `mix.exs` elixir dep to `~> 1.5`
   * boot -d boot/new new -t hoplon -n hoaka
   * mv hoaka cljs
+  * move compile web sources (scss, js, vendor, etc) to assets
+  * create cljs/src/js and place boot edn and phoenix js (foreign lib) files in it
 
 ## General Info
 
