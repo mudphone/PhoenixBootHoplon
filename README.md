@@ -17,6 +17,8 @@
   * mv hoaka cljs
   * move compile web sources (scss, js, vendor, etc) to assets
   * create cljs/src/js and place boot edn and phoenix js (foreign lib) files in it
+  * replace cljs/src/index.cljs.hl with cljs/src/hoaka/main.cljs.hl
+  * in main.cljs.hl, attach to phoenix template via jQuery
   * npm install
   * boot dev
   * mix phx.server
