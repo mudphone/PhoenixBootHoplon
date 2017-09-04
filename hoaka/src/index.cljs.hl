@@ -1,0 +1,7 @@
+(page "index.html")
+
+(html
+  (head
+    (link :href "app.css" :rel "stylesheet" :type "text/css"))
+  (body
+    (h1 "Hello, Hoplon!")))
