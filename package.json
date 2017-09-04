@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PasDeChocolat/PSD_Forms.git"
+    "url": "git+https://github.com/mudphone/PhoenixBootHoplon.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PasDeChocolat/PSD_Forms/issues"
+    "url": "https://github.com/mudphone/PhoenixBootHoplon/issues"
   },
-  "homepage": "https://github.com/PasDeChocolat/PSD_Forms#readme",
+  "homepage": "https://github.com/mudphone/PhoenixBootHoplon#readme",
   "engines": {
     "node": "6.x"
   },

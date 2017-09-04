@@ -7,6 +7,7 @@
   * Phoenix 1.3.0
   * Java (JVM)
   * Boot (aka boot-clj)
+  * Nodejs/npm
 
 ## What was done
 
@@ -16,6 +17,9 @@
   * mv hoaka cljs
   * move compile web sources (scss, js, vendor, etc) to assets
   * create cljs/src/js and place boot edn and phoenix js (foreign lib) files in it
+  * npm install
+  * boot dev
+  * mix phx.server
 
 ## General Info
 
