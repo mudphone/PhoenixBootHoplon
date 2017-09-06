@@ -9,7 +9,7 @@
   * Boot (aka boot-clj)
   * Nodejs/npm
 
-## What was done
+## What was done to get Hoplon/Boot working
 
   * mix phx.new web --no-brunch --no-ecto
   * update `mix.exs` elixir dep to `~> 1.5`
@@ -22,6 +22,12 @@
   * npm install
   * boot dev
   * mix phx.server
+
+## Adding Channels and Javelin
+
+  * mix phx.gen.channel Chat
+  * add to user_socket.ex: channel "rooms:lobby", HoakaWeb.ChatChannel
+  
 
 ## General Info
 

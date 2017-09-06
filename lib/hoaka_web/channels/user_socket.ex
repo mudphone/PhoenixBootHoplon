@@ -3,6 +3,7 @@ defmodule HoakaWeb.UserSocket do
 
   ## Channels
   # channel "room:*", HoakaWeb.RoomChannel
+  channel "rooms:lobby", HoakaWeb.ChatChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

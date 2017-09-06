@@ -1,11 +1,57 @@
 (ns hoaka.main
   (:require
    [cljsjs.bootstrap]
-   [cljsjs.jquery]))
+   [cljsjs.jquery]
+   [hoaka.channels.userland :as ch]
+   [javelin.core :refer [cell] :refer-macros [cell= defc defc=]]))
 
-(defelem hello [_ _]
-  (h1 "Hello, Hoplon!"))
+(def ENTER-KEY 13)
+
+(defonce chat-cell (cell ""))
+(defonce chat-history (cell ["test chat message"]))
+
+(defn js->msg [new-msg]
+  (get new-msg "msg"))
+
+(defn update-cell-history! [new-msg]
+  (swap! chat-history #(conj % (js->msg new-msg))))
+
+(defonce phoenix-channels-setup
+  (do
+    (ch/setup-socket!)
+    (ch/setup-chat-lobby-channel!)
+    (ch/connect-chat-cell chat-cell)
+    (cell= (update-cell-history! chat-cell))))
+
+(defn press-enter [jq-input e]
+  (when (= (.-keyCode e) ENTER-KEY)
+    (-> (.val jq-input)
+        (ch/send-chat-lobby-msg))
+    (.val jq-input "")))
+
+(defelem chat-messages [_ _]
+  (div :id "messages" :class "container"
+    (for-tpl [m chat-history]
+      (div m))))
+
+(defelem chat-interface [_ _]
+  (let [msg-input (input :id "message-input" :class "form-control")
+        jq-msg-input (js/jQuery msg-input)]
+    (doto jq-msg-input
+      (.off "keypress")
+      (.on "keypress" (partial press-enter jq-msg-input)))
+    (div
+      (chat-messages)
+      (div :class "footer"
+        (div :class "container"
+          (div :class "row"
+            (div :class "col-sm-2"
+              (div :class "input-group"
+                (span :class "input-group-addon" "@")
+                (input :id "username" :type "text" :class "form-control" :placeholder "username")))
+            (div :class "col-sm-10"
+              msg-input)))))))
 
 (js/jQuery #(-> (js/jQuery "#mountpoint")
                 .empty
-                (.append (hello))))
+                (.append (chat-interface))))

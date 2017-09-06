@@ -38,3 +38,4 @@ erl_crash.dump
 /target
 /.nrepl-port
 /.repl-history
+/out
