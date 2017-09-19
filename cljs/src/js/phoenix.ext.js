@@ -42,7 +42,7 @@ Phoenix.Channel.prototype = {
   },
   socket: {},
   state: {},
-  timeout: {};
+  timeout: {},
   topic: {}
 };
 
