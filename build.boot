@@ -15,6 +15,8 @@
                  [org.clojure/clojurescript   "1.9.293"]
                  [cljsjs/bootstrap            "3.3.6-1"]
                  [cljsjs/jquery               "2.2.4-0"]
+                 [cljsjs/phoenix              "1.3.0-0"]
+                 [cljsjs/phoenix-html         "2.10.4-0"]
                  [adzerk/boot-cljs-repl   "0.3.3"  :scope "test"]
                  [com.cemerick/piggieback "0.2.1"  :scope "test"]
                  [weasel                  "0.7.0"  :scope "test"]

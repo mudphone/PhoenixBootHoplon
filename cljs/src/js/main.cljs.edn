@@ -1,6 +1,3 @@
 {:require [hoaka.main]
- :compiler-options {:asset-path "/js/main.out"
-                    :externs ["js/phoenix.ext.js"]
-                    :foreign-libs [{:file "js/phoenix.js"
-                                    :provides ["Phoenix"]}]}}
+ :compiler-options {:asset-path "/js/main.out"}}
 

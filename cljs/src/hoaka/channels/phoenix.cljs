@@ -1,6 +1,7 @@
 (ns hoaka.channels.phoenix
   (:require
-   [Phoenix]))
+   [cljsjs.phoenix]
+   [cljsjs.phoenix-html]))
 
 ;; All Phoenix JS-specific code goes here.
 ;;===========================================
